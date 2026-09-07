@@ -1,0 +1,17 @@
+{
+  "name": "FiPl",
+  "short_name": "F$p",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0f0",
+  "background_color": "#f00",
+  "description": "Financial flow planer",
+  "icons": [
+    {
+      "src": "/assets-fp/img/logo-round.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

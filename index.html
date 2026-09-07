@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="manifest" href="./manifest.json" /> -->
+	<title>FInancial flow PLanner | FiPl</title>
+	<link rel="stylesheet" type="text/css" href="./assets-fp/css/style.css">
+	<link rel="icon" type="image/png" href="./assets-fp/img/logo-round.png" >
+</head>
+<body>
+	<fipl-app></fipl-app>
+	<script type="text/javascript" src="./assets-fp/js/script.js"></script>
+	<!--
+
+		implement for storage save 
+			startSpendDate: first timestamp
+			spendingList
+			spendingSum
+			spendingPrices: {
+				timestemp: sum,
+				timestemp: sum,
+				...
+			}
+		~move form to popup
+		~add info
+			~recomend limit by day
+			~today spending
+			~avaliable today
+		~implement total sum and counter limit sum by one day
+		~after approve need cleareng pending counter
+		~fixed disable counter after approving or disable
+		~calculate sum of total sum and current total spending sum
+		~change price for pending el with click
+		create fuq and dock
+
+		{"spendingSum":1698,"spendingList":{"1756296696860":{"status":"approve","sum":"75","desc":"","typeStr":"Кафе та ресторан"},"1756296716498":{"status":"approve","sum":"210","desc":"","typeStr":"Продукти"},"1756296884904":{"status":"approve","sum":"1413","desc":"","typeStr":"Продукти, Косметичні засоби"}}}
+
+		{"spendingSum":3248.95,"spendingList":{"1756358966861":{"status":"approve","sum":"200","desc":"реестрація на ретрит","typeStr":"Багодійність"},"1756364164557":{"status":"approve","sum":"40","desc":"вода","typeStr":"Продукти"},"1756394150715":{"status":"approve","sum":"564","desc":"","typeStr":"Кафе та ресторан"},"1756394162301":{"status":"approve","sum":"220","desc":"","typeStr":"Краса та здоровя"},"1756394193752":{"status":"approve","sum":"318.5","desc":"","typeStr":"Продукти"},"1756394216757":{"status":"approve","sum":"208.45","desc":"","typeStr":"Продукти"}}}
+
+		{"spendingSum":4340.58,"spendingList":{"1756673249560":{"status":"approve","sum":"72","desc":"","typeStr":"Кафе та ресторан"},"1756673263669":{"status":"approve","sum":"203","desc":"","typeStr":"Продукти"},"1756673275336":{"status":"approve","sum":"32","desc":"","typeStr":"Продукти"}}}
+
+		{"spendingSum":233,"spendingList":{"1756712853739":{"status":"approve","sum":"40","desc":"вода","typeStr":"Продукти"},"1756724522549":{"status":"approve","sum":"105","desc":"","typeStr":"Кафе та ресторан"},"1756732344872":{"status":"approve","sum":"88","desc":"","typeStr":"Продукти"}}}
+
+		{"spendingSum":1075.8,"spendingList":{"1756809749499":{"status":"approve","sum":"185","desc":"","typeStr":"Кафе та ресторан"},"1756809763221":{"status":"approve","sum":"657.80","desc":"","typeStr":"Продукти"}}}
+
+		{"spendingSum":5983.89,"spendingList":{"1757491162985":{"status":"approve","sum":"65","desc":"","typeStr":"Кафе та ресторан"}}}
+
+		{"spendingSum":966.79,"spendingList":{"1757936159585":{"id":1757936159585,"status":"disable","sum":"500","desc":"Хліб \nМолоко \nТворог \nКовбаса \nКартопля ","typeStr":"Продукти"},"1757936565762":{"id":1757936565762,"status":"disable","sum":"800","desc":"М'ясо\nСерветки \nСир\nБанани\nВода\nПерсик\nГречка\nРис\nСік\nФруктове пюре","typeStr":"Продукти"},"1757936957286":{"id":1757936957286,"status":"disable","sum":"50","desc":"Вода","typeStr":"Продукти"},"1757950956838":{"status":"approve","sum":"50","desc":"вода","typeStr":"Продукти"},"1757950973543":{"status":"approve","sum":"190","desc":"","typeStr":"Кафе та ресторан"},"1757951006415":{"status":"approve","sum":"726.79","desc":"","typeStr":"Продукти"}}}
+
+		
+		measurement units
+			кг
+			гр
+			мл
+			л
+			шт
+
+		category
+
+			хліб
+			олія
+			майонез
+			кетчуп
+			риба
+			цукор
+			сіль
+
+			крупа
+				гречана
+				гречан пласт
+				рисова
+				пшенична
+				вівсяна
+				суміш
+				кускус
+
+			яйця
+				курячі
+				перепел
+
+			молочні
+				сир
+				творог
+				сметана
+				молоко
+				масло
+				йогурт
+
+			овочі
+				картопля
+				буряк
+				морква
+				капуста
+				цибуля
+
+			фрукти
+				яблука
+				банани
+				груши
+				персики
+
+			зелен
+				цибуля
+				петрушка
+				салат
+				рукола
+				кріп
+
+			ягоди
+				малина
+				лохина
+				суниця
+				черешня
+
+
+			мясо
+				курка
+				перепілка
+				індичка
+				ковбаса
+				сосиски
+				фарш
+
+			десерт
+				печиво
+				бублики
+				цукерки
+				шоколад
+				макарун
+				торт
+				вафлі
+				кекс
+
+
+			косметичні засоби
+				щітка
+				паста
+				нитка
+				мило
+				шампунь
+				гель
+				сарветки
+				сарвет вологі
+				туал папір
+
+			побутова хімія
+				для посуду
+				для прання
+				для полоскання
+				таблетки посуд
+				сіль посуд
+				ополіскувач посуд
+
+
+
+			одяг
+			взуття
+	 -->
+</body>
+</html>

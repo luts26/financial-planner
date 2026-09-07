@@ -1,0 +1,7 @@
+caterories.file
+cert.pem
+csr.pem
+key.pem
+node_modules/
+.env
+.env.local

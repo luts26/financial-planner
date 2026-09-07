@@ -1,0 +1,16 @@
+{
+  "name": "fipl",
+  "version": "2.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "ws": "^8.18.3"
+  }
+}
