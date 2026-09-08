@@ -207,6 +207,12 @@ FIPL was designed to work on both desktop and mobile screens.
 
 The interface adapts to the available viewport so that financial planning and expense management can also be used from a phone.
 
+<p align="center">
+  <img src="docs/screenshots/planning-mobile.png" width="30%" alt="Financial planning">
+  <img src="docs/screenshots/add-expense-mobile.png" width="30%" alt="Adding planned expense">
+  <img src="docs/screenshots/expense-list-mobile.png" width="30%" alt="Planned expenses">
+</p>
+
 ## Tech Stack
 
 - JavaScript
