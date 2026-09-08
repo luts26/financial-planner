@@ -549,21 +549,21 @@ function getTotalStatus() {
 }
 
 function getCategories(activeCats = null) {
-	let outHtml = '<select name="" id="">'
+	let outHtml = '<div class="type_list"><ul>'
 	let activeCatsArr = []
 	if (activeCats) {
 		activeCatsArr = activeCats.split(',')
 	}
 	Object.keys(CATEGORIES).forEach(i => {
 		outHtml += `
-			<option 
+			<li 
 				class="type_item ${(activeCatsArr.indexOf(i) !== -1) ? 'active' : ''}" 
 				data-keytype="${CATEGORIES[i]['key']}"
 			>`
 		outHtml += CATEGORIES[i][lang]
-		outHtml += '</option>'
+		outHtml += '</li>'
 	})
-	return outHtml + '</select>'
+	return outHtml + '</ul></div>'
 }
 
 function getForm(formData = null) {
@@ -928,31 +928,16 @@ function eventClick(event) {
 	}
 
 	if (event.target.closest('.type_item')) {
-		_log(event.target.closest('.type_item').dataset['keytype'])
-		// _log('some item 1212121212')
-		let keyType = event.target.closest('.type_item').dataset['keytype']
-		createProductCategoriesList(keyType)
-		// productCategories.forEach(i => {
-		// 	if (keyType === i.typeid) {
-		// 		_log(i.typeid)
-		// 		_log('set ul for typeid', keyType)
-		// 	}
-		// })
-		// event.target.closest('.type_item').classList.toggle('active')
+		event.target.closest('.type_item').classList.toggle('active')
 		return
 	}
 
-	if (event.target.closest('.add_new_item')) {
-
-	}
-
 	if (event.target.closest('.form_caterory_list')) {
-		_log('asdfasdf111')
 		if (event.target.closest('option')) {
 			let itemId = event.target.closest('option').dataset.itemid
-
 			createSubCategoryList(itemId)
 		}
+		return
 	}
 
 	if (event.target.closest('.add_new_request')) {
@@ -1114,6 +1099,7 @@ function createSubCategoryList(catId = null) {
 
 
 function createProductCategoriesList(typeId = null) {
+	return
 	let outHtml = '<select name="" id="" class=""><option value="" disable>Select Category</option>'
 	let items = ''
 	productCategories.forEach(i => {
@@ -1165,7 +1151,7 @@ let mainCounter = {
 	total: {count: 0,price: 0,sym:''}
 }
 
-let lang = 'uk'
+let lang = 'en'
 let limitByDay = 0
 let pendingSpend = 0
 let spendingSum = 0
@@ -1174,8 +1160,8 @@ let editRequestId = null
 let touchPressTimer = null
 
 let inData = {
-	countPrice: 10000,
-	startDate: '2026-09-01 19:06:01',
+	countPrice: 12000,
+	startDate: '2026-09-07 19:06:01',
 	countDate: '2026-09-30 23:59:01'
 }
 
@@ -1183,7 +1169,6 @@ let inData = {
 async function runSW() {
 	if ('serviceWorker' in navigator) {
 		try {
-			// alert('111')
 			await navigator.serviceWorker.register('./sw.js')
 			console.log('sw: like')
 			// hbooApp()
@@ -1198,7 +1183,5 @@ async function runSW() {
 // })
 
 // runSW()
-
-// alert('asdfasdf')
 
 hbooApp()
